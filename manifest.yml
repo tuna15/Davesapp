@@ -1,11 +1,8 @@
+---
 applications:
-  - instances: 1
-    timeout: 180
-    name: davesapp-rayman
-    buildpack: sdk-for-nodejs
-    command: 'npm prune --production && NODE_ENV=production npm start'
-    memory: 256M
-    domain: mybluemix.net
-    host: davesapp-rayman
-    env:
-      NPM_CONFIG_PRODUCTION: false
+- instances: 1
+  timeout: 180
+  name: DavesApp
+  buildpack: sdk-for-nodejs
+  command: npm start
+  random-route: true
