@@ -1,10 +1,8 @@
 ---
-path: .
-memory: 256M
-instances: 1
-domain: mybluemix.net
-name: davesapp-rayman
-host: davesapp-rayman
-disk_quota: 1G
-env:
-  NODE_ENV: bluemix
+applications:
+- instances: 1
+  timeout: 180
+  name: DavesApp-rayman
+  buildpack: sdk-for-nodejs
+  command: npm start
+  random-route: true
